@@ -1,0 +1,22 @@
+@mixin tablet {
+  @media all and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin text($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

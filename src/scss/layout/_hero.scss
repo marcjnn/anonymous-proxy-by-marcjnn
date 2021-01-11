@@ -1,0 +1,38 @@
+.hero {
+  background: url(../images/cover.jpg) center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  color: white;
+  &__title {
+    margin-bottom: 10px;
+    font-family: $fontSecondary;
+    @include text(42px, 1.31);
+    // font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    &--linebreak {
+      display: block;
+    }
+  }
+  &__claim {
+    @include text(16px, normal);
+    font-weight: 400;
+    margin-bottom: 45px;
+  }
+  &__icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    @include center;
+    margin-bottom: 53px;
+    &--link {
+      // svg has 12px height and <a> 18px height; margin to remove that difference and put the svg in the center
+      margin-top: 5px;
+    }
+  }
+}
