@@ -14,6 +14,15 @@
     // font-weight: bold;
     text-transform: uppercase;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    @include tablet {
+      @include text(80px, 1.33);
+      margin-bottom: 20px;
+    }
+    @include desktop {
+      @include text(100px, 1.32);
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      margin-bottom: 0px;
+    }
     &--linebreak {
       display: block;
     }
@@ -22,6 +31,11 @@
     @include text(16px, normal);
     font-weight: 400;
     margin-bottom: 45px;
+    @include tablet {
+      @include text(24px, normal);
+      // since only font-size changes, should I use only that atribute or the whole mixin?
+      margin-bottom: 30px;
+    }
   }
   &__icon {
     width: 45px;
@@ -30,6 +44,12 @@
     background-color: white;
     @include center;
     margin-bottom: 53px;
+    @include tablet {
+      margin-bottom: 45px;
+    }
+    @include desktop {
+      margin-bottom: 13px;
+    }
     &--link {
       // svg has 12px height and <a> 18px height; margin to remove that difference and put the svg in the center
       margin-top: 5px;
