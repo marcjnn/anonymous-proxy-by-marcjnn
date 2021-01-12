@@ -1,3 +1,5 @@
+// media queries
+
 @mixin tablet {
   @media all and (min-width: 768px) {
     @content;
@@ -10,6 +12,8 @@
   }
 }
 
+//  generic
+
 @mixin text($fontSize, $lineHeight) {
   font-size: $fontSize;
   line-height: $lineHeight;
@@ -20,6 +24,30 @@
   justify-content: center;
   align-items: center;
 }
+
+// content - text
+
+@mixin contentTitle {
+  font-family: $fontSecondary;
+  text-transform: capitalize;
+  @include text(24px, 1.25);
+  @include tablet {
+    @include text(26px, 1.73);
+  }
+  @include desktop {
+    @include text(32px, 1.41);
+  }
+}
+
+@mixin contentAbstract {
+  @content;
+  @include text(18px, 1.67);
+  @include tablet {
+    @include text(20px, 1.5);
+  }
+}
+
+// content - buttons
 
 @mixin linkBtnBorder {
   color: $colorSide;

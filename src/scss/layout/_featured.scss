@@ -15,26 +15,28 @@
     }
   }
   &__title {
-    font-family: $fontSecondary;
-    @include text(24px, 1.25);
-    text-transform: capitalize;
+    @include contentTitle;
+    // font-family: $fontSecondary;
+    // @include text(24px, 1.25);
+    // text-transform: capitalize;
     margin-bottom: 15px;
     // font-weight: bold;
     @include tablet {
-      @include text(26px, 1.73);
+      // @include text(26px, 1.73);
       margin-bottom: 30px;
     }
-    @include desktop {
-      @include text(32px, 1.41);
-    }
+    // @include desktop {
+    //   @include text(32px, 1.41);
+    // }
   }
   &__abstract {
-    color: #4a4a4a;
-    @include text(18px, 1.67);
+    // color: #4a4a4a;
+    // @include text(18px, 1.67);
+    @include contentAbstract;
     margin-bottom: 30px;
-    @include tablet {
-      @include text(20px, 1.5);
-    }
+    // @include tablet {
+    //   @include text(20px, 1.5);
+    // }
   }
 }
 
