@@ -17,12 +17,25 @@
       padding-bottom: 60px;
     }
   }
+  &__link {
+    @include linkButton;
+    @include linkBtnBackground;
+    width: 184px;
+    height: 45px;
+    @include tablet {
+      width: 210px;
+    }
+    @include desktop {
+      width: 255px;
+    }
+
+    &:hover {
+      @include linkBtnBorder;
+    }
+  }
   .list {
     // grid solo para los 3 articulos, no toda la seccion
-    // margin: 0 auto;
-    // width: 55%;
     display: grid;
-    // version 1 (with width and margin?? does the width have to be 180px up until 867px
     grid-template-columns: 180px;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 45px;
@@ -32,9 +45,12 @@
     // grid-template-rows: 1fr 1fr 1fr;
     // grid-row-gap: 45px;
     @include tablet {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 210px 210px 210px;
       grid-template-rows: 1fr;
       grid-gap: 30px;
+    }
+    @include desktop {
+      grid-template-columns: 350px 350px 350px;
     }
     &__single {
       // &:first-child
@@ -78,11 +94,4 @@
       }
     }
   }
-  .page__container {
-    @include desktop {
-      margin: 0 85px;
-    }
-  }
 }
-
-// link in links

@@ -62,10 +62,6 @@
     &--link {
       text-decoration: none;
       color: inherit;
-      // &:visited {
-      //   text-decoration: none;
-      //   color: inherit;
-      // }
     }
     &--main {
       order: 1;
@@ -89,5 +85,3 @@
     }
   }
 }
-
-// box-shadow: 0 2px 4px 0 var(--k-50); black with 0.5 alpha

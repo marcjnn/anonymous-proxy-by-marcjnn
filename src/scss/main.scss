@@ -1,11 +1,12 @@
+// core
 @import "core/variables";
 @import "core/reset";
 @import "core/mixins";
-@import "components/links";
+
+// layout
 @import "layout/page";
 @import "layout/header";
 @import "layout/hero";
 @import "layout/featured";
 @import "layout/reasons";
 @import "layout/footer";
-@import "pages/index";

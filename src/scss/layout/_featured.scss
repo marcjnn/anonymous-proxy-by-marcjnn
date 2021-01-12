@@ -38,6 +38,18 @@
     //   @include text(20px, 1.5);
     // }
   }
+  &__link {
+    @include linkButton;
+    width: 76px;
+    height: 45px;
+    @include tablet {
+      width: 91px;
+    }
+    @include desktop {
+      width: 160px;
+    }
+    &:hover {
+      @include linkBtnBackground;
+    }
+  }
 }
-
-// link in links

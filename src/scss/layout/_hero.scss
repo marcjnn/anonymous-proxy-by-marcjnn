@@ -3,20 +3,22 @@
     url(../images/cover.jpg) center / cover no-repeat;
   background-blend-mode: multiply;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
-  color: white;
   @include desktop {
     background: url(../images/cover.jpg) center / cover no-repeat;
+  }
+  &__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    color: white;
   }
   &__title {
     margin-bottom: 10px;
     font-family: $fontSecondary;
     @include text(42px, 1.31);
-    // font-weight: 700;
     text-transform: uppercase;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     @include tablet {
