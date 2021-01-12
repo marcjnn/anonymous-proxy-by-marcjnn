@@ -3,11 +3,14 @@
   top: 0;
   left: 0;
   background-color: #0271bc;
-  @include center;
-  width: 44px;
-  height: 44px;
+  // where to put width & height - in header or nav
+  // width: 44px;
+  // height: 44px;
   // is it ok to only have &__nav for further nesting purposes without applying any styling
   &__nav {
+    @include center;
+    width: 44px;
+    height: 44px;
     &--img {
       display: block;
     }
