@@ -40,9 +40,8 @@
 }
 
 @mixin contentAbstract {
-  @content;
-  @include text(18px, 1.67);
-  @include tablet {
+    @include text(18px, 1.67);
+    @include tablet {
     @include text(20px, 1.5);
   }
 }

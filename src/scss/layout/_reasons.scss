@@ -1,4 +1,7 @@
 .reasons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #eff9ff;
   text-align: center;
   padding: 30px 0px 60px;
@@ -6,28 +9,80 @@
     padding-top: 60px;
   }
   &__title {
-    font-family: $fontSecondary;
-    @include text(24px, 1.25);
-    text-transform: capitalize;
+    @include contentTitle;
     @include tablet {
-      @include text(26px, 1.73);
-    }
-    @include desktop {
-      @include text(32px, 1.41);
+      margin-bottom: 14px;
     }
   }
   &__list {
     padding: 45px 0px;
+    @include tablet {
+      padding-bottom: 60px;
+    }
+  }
+  .list {
+    // grid solo para los 3 articulos, no toda la seccion
+    // margin: 0 auto;
+    // width: 55%;
     display: grid;
+    // version 1 (with width and margin?? does the width have to be 180px up until 867px
+    grid-template-columns: 180px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 45px;
+
+    // version 2 - preguntar
+    // grid-template-columns: 1fr 180px 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    // grid-row-gap: 45px;
+    @include tablet {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 30px;
+    }
+    &__single {
+      // &:first-child
+      // &--fst {
+      //   grid-column: 2;
+      //   grid-row: 1;
+      //   @include tablet {
+      //     grid-column: 1;
+      //   }
+      // }
+      // &:nth-child(2)
+      // &--snd {
+      //   grid-column: 2;
+      //   grid-row: 2;
+      //   @include tablet {
+      //     grid-column: 2;
+      //     grid-row: 1;
+      //   }
+      // }
+      // &:last-child
+      // &--thrd {
+      //   grid-column: 2;
+      //   grid-row: 3;
+      //   @include tablet {
+      //     grid-column: 3;
+      //     grid-row: 1;
+      //   }
+      // }
+      &--title {
+        font-family: $fontSecondary;
+        @include text(18px, 1.67);
+        @include tablet {
+          @include text(24px, 1.25);
+        }
+      }
+      &--text {
+        @include contentAbstract;
+      }
+    }
+  }
+  .page__container {
+    @include desktop {
+      margin: 0 85px;
+    }
   }
 }
 
 // link in links
-// .reasons__link {
-//   @include linkButton;
-//   padding: 0 43px;
-//   @include linkBtnBackground;
-//   &:hover {
-//     @include linkBtnBorder;
-//   }
-// }

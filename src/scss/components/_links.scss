@@ -15,8 +15,16 @@
 
 .reasons__link {
   @include linkButton;
-  padding: 0 43px;
   @include linkBtnBackground;
+  width: 184px;
+  height: 45px;
+  @include tablet {
+    width: 210px;
+  }
+  @include desktop {
+    width: 255px;
+  }
+
   &:hover {
     @include linkBtnBorder;
   }
