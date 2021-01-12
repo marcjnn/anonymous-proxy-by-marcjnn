@@ -1,5 +1,7 @@
 .hero {
-  background: url(../images/cover.jpg) center / cover no-repeat;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, black),
+    url(../images/cover.jpg) center / cover no-repeat;
+  background-blend-mode: multiply;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,6 +9,9 @@
   align-items: center;
   text-align: center;
   color: white;
+  @include desktop {
+    background: url(../images/cover.jpg) center / cover no-repeat;
+  }
   &__title {
     margin-bottom: 10px;
     font-family: $fontSecondary;
