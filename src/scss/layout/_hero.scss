@@ -11,7 +11,7 @@
     margin-bottom: 10px;
     font-family: $fontSecondary;
     @include text(42px, 1.31);
-    // font-weight: bold;
+    // font-weight: 700;
     text-transform: uppercase;
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     @include tablet {
@@ -28,6 +28,7 @@
     }
   }
   &__claim {
+    // letter spacing :thinking-face:
     font-family: $fontMain;
     @include text(16px, normal);
     font-weight: 400;
@@ -51,9 +52,12 @@
     @include desktop {
       margin-bottom: 13px;
     }
-    &--link {
-      // svg has 12px height and <a> 18px height; margin to remove that difference and put the svg in the center
-      margin-top: 5px;
+    // &--link {
+    //   // svg has 12px height and <a> 18px height; margin to remove that difference and put the svg in the center
+    //   margin-top: 5px;
+    // }
+    &--img {
+      display: none;
     }
   }
 }
