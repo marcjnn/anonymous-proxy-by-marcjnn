@@ -51,12 +51,8 @@
     @include desktop {
       margin-bottom: 13px;
     }
-    // &--link {
-    //   // svg has 12px height and <a> 18px height; margin to remove that difference and put the svg in the center
-    //   margin-top: 5px;
-    // }
     &--img {
-      display: none;
+      display: block;
     }
   }
 }
