@@ -6,4 +6,10 @@
   @include center;
   width: 44px;
   height: 44px;
+  // is it ok to only have &__nav for further nesting purposes without applying any styling
+  &__nav {
+    &--img {
+      display: block;
+    }
+  }
 }
