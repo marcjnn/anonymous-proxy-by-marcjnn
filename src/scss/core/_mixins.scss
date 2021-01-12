@@ -20,3 +20,32 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin linkBtnBorder {
+  color: $colorSide;
+  background-color: white;
+}
+
+@mixin linkBtnBackground {
+  color: white;
+  background-color: $colorSide;
+}
+
+@mixin transition {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin linkButton {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 2.25;
+  font-weight: 500;
+  border-radius: 22.5px;
+  padding: 0px 33px;
+  display: inline-block;
+  color: $colorSide;
+  background-color: white;
+  border: 2px solid $colorSide;
+  @include transition;
+  @content;
+}

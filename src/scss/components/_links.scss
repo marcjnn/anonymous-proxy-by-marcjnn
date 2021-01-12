@@ -1,1 +1,15 @@
+.featured__link {
+  @include linkButton;
+  &:hover {
+    @include linkBtnBackground;
+  }
+}
 
+.reasons__link {
+  @include linkButton;
+  padding: 0 43px;
+  @include linkBtnBackground;
+  &:hover {
+    @include linkBtnBorder;
+  }
+}

@@ -1,0 +1,23 @@
+.trial {
+  // &--one {
+  //   @include goTwo;
+  //   &:hover {
+  //     @include reasons;
+  //   }
+  // }
+  &--two {
+    @include linkButton;
+    padding: 0 43px;
+    @include linkBtnBackground;
+    &:hover {
+      @include linkBtnBorder;
+    }
+  }
+}
+// link in links, remove when clearing
+// .featured__link {
+//   @include linkButton;
+//   &:hover {
+//     @include linkBtnBackground;
+//   }
+// }
