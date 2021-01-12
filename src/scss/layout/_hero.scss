@@ -29,7 +29,6 @@
   }
   &__claim {
     // letter spacing :thinking-face:
-    font-family: $fontMain;
     @include text(16px, normal);
     font-weight: 400;
     margin-bottom: 45px;
