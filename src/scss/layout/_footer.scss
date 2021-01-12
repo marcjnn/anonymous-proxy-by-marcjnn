@@ -1,4 +1,93 @@
-.special__font {
-  font-family: $fontSpecial;
-  color: $colorSide;
+.footer {
+  position: relative;
+  padding: 60px 0px 45px;
+  background-color: #304268;
+  color: white;
+  text-align: center;
+  @include tablet {
+    padding-top: 45px;
+    text-align: left;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+  &__icon {
+    @include icon;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &--img {
+      display: block;
+    }
+  }
+  &__copyright {
+    order: 3;
+    @include tablet {
+      order: 1;
+      width: 210px;
+    }
+    @include desktop {
+      width: 160px;
+    }
+    &--text {
+      @include text(14px, 2.14);
+    }
+    .special__font {
+      font-family: $fontSpecial;
+      color: $colorSide;
+    }
+    &--linebreak {
+      display: block;
+    }
+  }
+  &__nav {
+    // @include footerMenu;
+    text-transform: uppercase;
+    @include text(16px, 1.88);
+    @include tablet {
+      width: 210px;
+    }
+    @include desktop {
+      width: 160px;
+    }
+    &--link {
+      text-decoration: none;
+      color: inherit;
+      // &:visited {
+      //   text-decoration: none;
+      //   color: inherit;
+      // }
+    }
+    &--main {
+      order: 1;
+      @include tablet {
+        order: 2;
+        margin: 0px 30px;
+      }
+    }
+    &--social {
+      margin: 30px 0px;
+      order: 2;
+      @include tablet {
+        order: 3;
+        margin: 0px;
+      }
+    }
+  }
+  .page__container {
+    @include desktop {
+      margin: 0px 370px;
+    }
+  }
 }
+
+// box-shadow: 0 2px 4px 0 var(--k-50); black with 0.5 alpha

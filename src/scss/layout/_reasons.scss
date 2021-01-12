@@ -10,9 +10,6 @@
   }
   &__title {
     @include contentTitle;
-    @include tablet {
-      margin-bottom: 14px;
-    }
   }
   &__list {
     padding: 45px 0px;
@@ -71,6 +68,9 @@
         @include text(18px, 1.67);
         @include tablet {
           @include text(24px, 1.25);
+        }
+        @include tablet {
+          margin-bottom: 14px;
         }
       }
       &--text {

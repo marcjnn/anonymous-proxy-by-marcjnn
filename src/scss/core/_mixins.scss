@@ -25,6 +25,14 @@
   align-items: center;
 }
 
+@mixin icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  @include centered;
+}
+
 // content - text
 
 @mixin contentTitle {
@@ -40,8 +48,8 @@
 }
 
 @mixin contentAbstract {
-    @include text(18px, 1.67);
-    @include tablet {
+  @include text(18px, 1.67);
+  @include tablet {
     @include text(20px, 1.5);
   }
 }
@@ -75,3 +83,7 @@
   @include transition;
   @content;
 }
+
+// @mixin footerMenu {
+//   text-transform: uppercase;
+// }
