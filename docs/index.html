@@ -11,94 +11,179 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
-
   <body>
-    <header class="header">
-      <nav>
-        <!-- is this div necesarry? -->
-        <div>
-          <a href="https://adalab.es/" title="Ir a adalab.es"
-            ><img src="./assets/images/ico-menu.svg" alt="menu de la página"
+    <div class="page">
+      <header class="header">
+        <nav class="header__nav">
+          <!-- remove or leave class in html if later not used?  remove -->
+          <a
+            class="header__nav--link"
+            href="https://adalab.es/"
+            title="Ir a adalab.es"
+            target="_blank"
+            ><img
+              class="header__nav--img"
+              src="./assets/images/ico-menu.svg"
+              alt="menu de la página"
+          /></a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="page__container">
+            <h1 class="hero__title">
+              <span class="hero__title--linebreak">Anonymous</span>
+              <span class="hero__title--linebreak">proxy</span>
+            </h1>
+            <h2 class="hero__claim">In hac habitasse platea dictumst.</h2>
+          </div>
+          <div class="hero__icon">
+            <a class="hero__icon--link" href="#reasons" title="Conoce las razones"
+              ><img
+                class="hero__icon--img"
+                src="./assets/images/ico-scroll-down.svg"
+                alt="scroll down"
+            /></a>
+          </div>
+        </section>
+
+        <section class="featured page__container">
+          <p class="featured__category">Insomnia tips</p>
+          <h2 class="featured__title">Looking through a window</h2>
+          <p class="featured__abstract">
+            Donec accumsan, nulla ut volutpat porttitor, quam odio tempus felis, at
+            luctus ex diam nec lectus. Vivamus semper sodales rutrum.
+          </p>
+          <!-- asegurarse si tiene que ser con la etiqueta <button> o <a> -->
+          <div><a class="featured__link" href="#" title="leer más">Go</a></div>
+        </section>
+
+        <section id="reasons" class="reasons">
+          <h2 class="reasons__title">3 reasons to purchase</h2>
+          <div class="reasons__list list page__container">
+            <article class="list__single list__single--fst">
+              <h3 class="list__single--title">Ut sed metus</h3>
+              <p class="list__single--text">Lorem ipsum dolor sit amet, consecteur.</p>
+            </article>
+            <article class="list__single list__single--snd">
+              <h3 class="list__single--title">Curabitur ac erat</h3>
+              <p class="list__single--text">Mauris mattis urna quis lorem molestie.</p>
+            </article>
+            <article class="list__single list__single--thrd">
+              <h3 class="list__single--title">Morbi dictum</h3>
+              <p class="list__single--text">Aliquam in dolor et dolor tincidunt.</p>
+            </article>
+          </div>
+          <div>
+            <a class="reasons__link" href="#" title="Más razones">More reasons</a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer__icon">
+          <a href="#home" title="vuelve al inicio"
+            ><img
+              class="footer__icon--img"
+              src="./assets/images/ico-arrow.svg"
+              alt=""
           /></a>
         </div>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <!-- section or div??? -->
-        <div class="page__column">
-          <h1 class="hero__title">
-            <span class="hero__title--linebreak">Anonymous</span>
-            <span class="hero__title--linebreak">proxy</span>
-          </h1>
-          <h2 class="hero__claim">In hac habitasse platea dictumst.</h2>
+        <div class="footer__wrap page__container">
+          <div class="footer__copyright">
+            <small class="footer__copyright--text">
+              <span class="footer__copyright--linebreak">© 2021</span
+              ><span class="footer__copyright--linebreak">
+                we <span class="special__font">❤️</span> components</span
+              >
+              <!-- ask if we heart components forms a part of copyright or is it separatly in p; or put both in spans or whatever -->
+            </small>
+          </div>
+          <nav class="footer__nav footer__nav--main">
+            <ul>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Articles</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Books</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Reasons</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Tips</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer__nav footer__nav--social">
+            <ul>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav--link"
+                  href="https://adalab.es/"
+                  title="Ir a adalab.es"
+                  target="_blank"
+                  >Mastodon.social</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="hero__icon">
-          <a class="hero__icon--link"
-          href="#" title="Conoce las razones"
-            ><img src="./assets/images/ico-scroll-down.svg" alt="scroll down"
-          /></a>
-        </div>
-      </section>
+      </footer>
 
-      <section>
-        <p>Insomnia tips</p>
-        <h2>Looking through a window</h2>
-        <p>
-          Donec accumsan, nulla ut volutpat porttitor, quam odio tempus felis, at
-          luctus ex diam nec lectus. Vivamus semper sodales rutrum.
-        </p>
-        <!-- asegurarse si tiene que ser con la etiqueta <button> o <a> -->
-        <div><a href="#" title="leer más">Go</a></div>
-      </section>
-
-      <section>
-        <h2>3 reasons to purchase</h2>
-        <article>
-          <h3>Ut sed metus</h3>
-          <p>Lorem ipsum dolor sit amet, consecteur.</p>
-        </article>
-        <article>
-          <h3>Curabitur ac erat</h3>
-          <p>Mauris mattis urna quis lorem molestie.</p>
-        </article>
-        <article>
-          <h3>Morbi dictum</h3>
-          <p>Aliquam in dolor et dolor tincidunt.</p>
-        </article>
-        <div>
-          <a href="#" title="Más razones">More reasons</a>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div>
-        <a href=""><img src="./assets/images/ico-arrow.svg" alt="" /></a>
-      </div>
-      <small>
-        ©2021 we ❤️ components
-        <!-- ask if we heart components forms a part of copyright or is it separatly in p; or put both in spans or whatever -->
-      </small>
-      <nav>
-        <ul>
-          <li>Articles</li>
-          <li>Books</li>
-          <li>Events</li>
-          <li>Reasons</li>
-          <li>Tips</li>
-        </ul>
-      </nav>
-      <nav>
-        <ul>
-          <li>Twitter</li>
-          <li>Instagram</li>
-          <li>Mastodon.social</li>
-        </ul>
-      </nav>
-    </footer>
-
+    </div>
   </body>
 </html>
