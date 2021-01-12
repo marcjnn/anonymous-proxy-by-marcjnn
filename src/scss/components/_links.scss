@@ -1,5 +1,13 @@
 .featured__link {
   @include linkButton;
+  width: 76px;
+  height: 45px;
+  @include tablet {
+    width: 91px;
+  }
+  @include desktop {
+    width: 160px;
+  }
   &:hover {
     @include linkBtnBackground;
   }

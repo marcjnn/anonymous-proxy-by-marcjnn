@@ -48,7 +48,7 @@
     height: 45px;
     border-radius: 50%;
     background-color: white;
-    @include center;
+    @include centered;
     margin-bottom: 53px;
     @include tablet {
       margin-bottom: 45px;

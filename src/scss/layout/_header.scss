@@ -4,7 +4,7 @@
   left: 0;
   background-color: #0271bc;
   &__nav {
-    @include center;
+    @include centered;
     width: 44px;
     height: 44px;
     &--img {
