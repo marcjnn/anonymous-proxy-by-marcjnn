@@ -1,3 +1,27 @@
+.reasons {
+  background-color: #eff9ff;
+  text-align: center;
+  padding: 30px 0px 60px;
+  @include desktop {
+    padding-top: 60px;
+  }
+  &__title {
+    font-family: $fontSecondary;
+    @include text(24px, 1.25);
+    text-transform: capitalize;
+    @include tablet {
+      @include text(26px, 1.73);
+    }
+    @include desktop {
+      @include text(32px, 1.41);
+    }
+  }
+  &__list {
+    padding: 45px 0px;
+    display: grid;
+  }
+}
+
 // link in links
 // .reasons__link {
 //   @include linkButton;

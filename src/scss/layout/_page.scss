@@ -1,3 +1,14 @@
 .page {
   font-family: $fontMain;
+  &__container {
+    margin: 0px 15px;
+    @include tablet {
+      margin: 0px 39px;
+    }
+    // @include desktop {
+    //   margin: 0px 275px;
+    // }
+  }
 }
+
+// ojo margenes - desktop: en footer 370, en reasons 85 but not exactly!!!
