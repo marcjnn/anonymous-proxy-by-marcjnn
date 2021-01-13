@@ -3,9 +3,6 @@
     url(../images/cover.jpg) center / cover no-repeat;
   background-blend-mode: multiply;
   height: 100vh;
-  @include desktop {
-    background: url(../images/cover.jpg) center / cover no-repeat;
-  }
   &__wrap {
     height: 100%;
     display: flex;
