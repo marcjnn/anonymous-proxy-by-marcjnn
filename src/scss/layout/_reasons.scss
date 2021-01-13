@@ -1,31 +1,29 @@
 .reasons {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // START ->>
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: repeat(5);
-  justify-content: center;
-  // row-gap: 45px;
-  // column-gap: 30px;
-  gap: 45px 0px;
-  justify-items: center;
-  @include tablet {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3);
-    column-gap: 30px;
+  .page__container {
+    @include desktop {
+      margin: 0 85px;
+    }
   }
-  @include desktop {
-    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
-    grid-template-rows: repeat(3);
-  }
-  // END <--
   background-color: #eff9ff;
   text-align: center;
   padding: 30px 0px 60px;
-  @include desktop {
-    padding-top: 60px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    gap: 45px 0px;
+    justify-items: center;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      column-gap: 30px;
+    }
+    @include desktop {
+      grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+      grid-template-rows: repeat(3, auto);
+      padding-top: 60px;
+    }
   }
   &__title {
     @include contentTitle;
@@ -34,12 +32,6 @@
     @include desktop {
       grid-column: 2 / 5;
       grid-row: 1;
-    }
-  }
-  &__list {
-    padding: 45px 0px;
-    @include tablet {
-      padding-bottom: 60px;
     }
   }
   &__link {
@@ -54,12 +46,10 @@
     @include desktop {
       width: 255px;
     }
-
     &:hover {
       @include linkBtnBorder;
     }
     &--container {
-      // justify-self: center;
       grid-column: span 3;
       grid-row: 5;
       @include tablet {
@@ -72,76 +62,54 @@
       }
     }
   }
-  .list {
-    // display: grid;
-    // grid-template-columns: 180px;
-    // grid-template-rows: 1fr 1fr 1fr;
-    // grid-gap: 45px;
-
-    // version 2 - preguntar
-    // grid-template-columns: 1fr 180px 1fr;
-    // grid-template-rows: 1fr 1fr 1fr;
-    // grid-row-gap: 45px;
-    // @include tablet {
-    //   grid-template-columns: 210px 210px 210px;
-    //   grid-template-rows: 1fr;
-    //   grid-gap: 30px;
-    // }
-    // @include desktop {
-    //   grid-template-columns: 350px 350px 350px;
-    // }
-    &__single {
-      // &:first-child
-      &--fst {
+  &__article {
+    &--title {
+      font-family: $fontSecondary;
+      @include text(18px, 1.67);
+      @include tablet {
+        @include text(24px, 1.25);
+      }
+      @include tablet {
+        margin-bottom: 14px;
+      }
+    }
+    &--text {
+      @include contentAbstract;
+    }
+    &--fst {
+      grid-column: 2;
+      grid-row: 2;
+      @include tablet {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      @include desktop {
         grid-column: 2;
         grid-row: 2;
-        @include tablet {
-          grid-column: 1;
-          grid-row: 2;
-        }
-        @include desktop {
-          grid-column: 2;
-          grid-row: 2;
-        }
       }
-      // &:nth-child(2)
-      &--snd {
+    }
+    &--snd {
+      grid-column: 2;
+      grid-row: 3;
+      @include tablet {
         grid-column: 2;
-        grid-row: 3;
-        @include tablet {
-          grid-column: 2;
-          grid-row: 2;
-        }
-        @include desktop {
-          grid-column: 3;
-          grid-row: 2;
-        }
+        grid-row: 2;
       }
-      // &:last-child
-      &--thrd {
-        grid-column: 2;
-        grid-row: 4;
-        @include tablet {
-          grid-column: 3;
-          grid-row: 2;
-        }
-        @include desktop {
-          grid-column: 4;
-          grid-row: 2;
-        }
+      @include desktop {
+        grid-column: 3;
+        grid-row: 2;
       }
-      &--title {
-        font-family: $fontSecondary;
-        @include text(18px, 1.67);
-        @include tablet {
-          @include text(24px, 1.25);
-        }
-        @include tablet {
-          margin-bottom: 14px;
-        }
+    }
+    &--thrd {
+      grid-column: 2;
+      grid-row: 4;
+      @include tablet {
+        grid-column: 3;
+        grid-row: 2;
       }
-      &--text {
-        @include contentAbstract;
+      @include desktop {
+        grid-column: 4;
+        grid-row: 2;
       }
     }
   }
