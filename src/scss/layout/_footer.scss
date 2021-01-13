@@ -24,7 +24,22 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
+    animation: 2s infinite pulse;
+    @keyframes pulse {
+      from {
+        transform: translate(-50%, -50%) scale(0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.05);
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+      }
+      to {
+        transform: translate(-50%, -50%) scale(0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
     &--img {
       display: block;
     }
