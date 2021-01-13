@@ -17,6 +17,7 @@
     @include tablet {
       grid-template-columns: repeat(3, 210px);
       grid-template-rows: repeat(3, auto);
+      justify-content: space-between;
       column-gap: 30px;
     }
     @include desktop {
