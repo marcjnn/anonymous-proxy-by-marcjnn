@@ -9,17 +9,19 @@
   padding: 30px 0px 60px;
   &__wrapper {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr;
+    grid-template-columns: 1fr 180px 1fr;
     grid-template-rows: repeat(5, auto);
     justify-content: center;
     gap: 45px 0px;
     justify-items: center;
     @include tablet {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 210px);
       grid-template-rows: repeat(3, auto);
       column-gap: 30px;
     }
     @include desktop {
+      grid-template-columns: repeat(3, 350px);
+      grid-template-rows: repeat(3, auto);
       padding-top: 60px;
     }
   }
