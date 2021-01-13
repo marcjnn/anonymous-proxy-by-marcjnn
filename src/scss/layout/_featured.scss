@@ -39,7 +39,9 @@
     // }
   }
   &__link {
-    @include linkButton;
+    @include linkButton {
+      @include linkBtnBorder;
+    }
     width: 76px;
     height: 45px;
     @include tablet {

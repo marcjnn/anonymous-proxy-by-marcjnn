@@ -76,14 +76,21 @@
   line-height: 2.25;
   font-weight: 500;
   border-radius: 22.5px;
-  color: $colorSide;
-  background-color: white;
+  @content;
   border: 2px solid $colorSide;
   @include centered;
   @include transition;
-  @content;
 }
 
-// @mixin footerMenu {
-//   text-transform: uppercase;
-// }
+// footer - nav
+
+@mixin footerMenu {
+  text-transform: uppercase;
+  @include text(16px, 1.88);
+  @include tablet {
+    width: 210px;
+  }
+  @include desktop {
+    width: 160px;
+  }
+}

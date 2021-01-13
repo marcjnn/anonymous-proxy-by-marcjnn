@@ -36,8 +36,10 @@
     }
   }
   &__link {
-    @include linkButton;
-    @include linkBtnBackground;
+    @include linkButton {
+      @include linkBtnBackground;
+    }
+    // @include linkBtnBackground;
     width: 184px;
     height: 45px;
     @include tablet {
