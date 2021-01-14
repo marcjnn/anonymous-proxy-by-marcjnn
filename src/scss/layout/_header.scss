@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: #0271bc;
+  background-color: $colorMenuTop;
   &__nav {
     @include centered;
     width: 44px;

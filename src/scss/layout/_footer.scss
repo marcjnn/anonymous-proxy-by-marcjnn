@@ -1,11 +1,11 @@
 .footer {
   position: relative;
-  padding: 60px 0px 45px;
-  background-color: #304268;
-  color: white;
+  padding: 45px 0px;
+  background-color: $colorMenuTop;
+  color: black;
   text-align: center;
   @include tablet {
-    padding-top: 45px;
+    // padding-top: 45px;
     text-align: left;
   }
   &__wrap {
@@ -47,7 +47,6 @@
   &__copyright {
     order: 3;
     @include tablet {
-      order: 1;
       width: 210px;
     }
     @include desktop {
@@ -63,13 +62,15 @@
     &--linebreak {
       display: block;
     }
+    &--colorNaranja {
+      color: $colorSide;
+    }
   }
   &__nav {
     &--main {
       @include footerMenu;
       order: 1;
       @include tablet {
-        order: 2;
         margin: 0px 30px;
       }
     }
@@ -78,7 +79,6 @@
       margin: 30px 0px;
       order: 2;
       @include tablet {
-        order: 3;
         margin: 0px;
       }
     }
